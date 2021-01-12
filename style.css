@@ -1,0 +1,145 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "M PLUS 1p", sans-serif;}
+body, html {
+  height: 100%;
+  color: rgb(85, 85, 85);
+  line-height: 1.8;
+  direction: rtl;
+  scroll-behavior: smooth;   
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-attachment: scroll;
+  background-image: url('img1.jpeg');
+  min-height: 740px;
+  filter: brightness(0.45);
+  animation: slidebg 30s infinite alternate;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 110% 110%;
+  }
+}
+
+@keyframes slidebg {
+  0% {
+    background-image: url('img1.jpeg');
+  }
+  25% {
+    background-image: url('img8.jpeg');
+  }
+  50% {
+    background-image: url('img6.jpeg');
+  }
+  75% {
+    background-image: url('img4.jpeg');
+  }
+  100% {
+    background-image: url('img5.jpeg');
+  }
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("img8.jpeg");
+  min-height: 200px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("img3.jpeg");
+  min-height: 200px;
+}
+
+.bgimg-4 {
+  background-image: url("img7.jpeg");
+  min-height: 200px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+
+  .bgimg-2, .bgimg-3, .bgimg-4 {
+    background-attachment: scroll;
+    min-height: 200px;
+  }
+}
+
+a {
+  transition: 0.4s;
+}
+
+.hover-bottom-border a {
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.hover-bottom-border a:hover {
+  border-bottom: 1px solid;
+}
+
+
+/* image gallery: */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* end of image gallery */
