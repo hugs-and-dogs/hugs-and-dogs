@@ -19,7 +19,7 @@ body, html {
 .bgimg-1 {
   background-attachment: scroll;
   background-image: url('img1.jpeg');
-  min-height: 740px;
+  min-height: 790px;
   filter: brightness(0.45);
   animation: slidebg 30s infinite alternate;
 }
